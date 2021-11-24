@@ -13,7 +13,7 @@ pool
 SELECT students.id as student_id, students.name as name, cohorts.name as cohort
 FROM students
 JOIN cohorts ON cohorts.id = cohort_id
-LIMIT 5;
+LIMIT $1;
 `
   )
   .then((res) => {
